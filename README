@@ -1,0 +1,48 @@
+
+PLAGIARISM STATEMENT 
+We certify that this assignment/report is our own work, based on our personal study and/or research and that we have acknowledged all material and sources used in its preparation, whether they be books, articles, reports, lecture notes, and any other kind of document, electronic or personal communication. We also certify that this assignment/report has not previously been submitted for assessment in any other course, except where specific permission has been granted from all course instructors involved, or at any other time in this course, and that we have not copied in part or whole or otherwise plagiarised the work of other students and/or persons. We pledge to uphold the principles of honesty and responsibility at CSE@IITH. In addition, We understand our responsibility to report honour violations by other students if we become aware of it.
+Names: G PRAJWAL, REVANTH ROKKAM
+Date:25-06-2020
+Signatures: GP,RR
+
+#README
+Files :-
+1.memutil.cpp   - written using "C++ "
+2.mykmod_main.c - written using "C "
+3.README
+4.REPORT
+
+#Compiling process:
+
+$: cd 99_devmmap_paging
+$: make  // By this command we compile the file to generate utility file that is used to test the file
+
+#Syntax
+
+Usage: ./util/memutil [options] <devname>
+Options:
+--operation <optype> : Where optype can be mapread, mapwrite
+--message <message>  : Message to be written/read-compare to/from the device memory
+--paging <ptype> 	: Where ptype can be prefetch or demand
+--help           	: Show this help
+
+These are useful to check the utility function
+
+#Testing process:
+
+runtest.sh is a test script to help testing the driver code.
+
+$ bash runtest.sh
+
+By this command we can test the file that gives the output and the log files.
+
+#output:
+[root@cs3523 99_devmmap_paging]# bash runtest.sh 
+PASS - Test 0 : Module loaded with majorno: 243
+PASS - Test 1 : Single process reading using mapping
+PASS - Test 2 : Single process writing using mapping
+PASS - Test 3 : Multiple process reading using mapping
+PASS - Test 4 : Multiple process writing using mapping
+PASS - Test 5 : One process writing using mapping and other process reading using mapping
+PASS - Test 6 : One process writing to one dev and other process reading from another dev
+
